@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+.container {
+    font-family: "Inter", sans-serif;
+    padding: 20px 40px;
+}
+.top {
+    display: flex;
+}
+.active-forum {
+    width: 71%;
+}
+.active-forum h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+.forum-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    border-right: 1px solid white;
+    position: relative;
+}
+.forum-wrapper::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+}
+.online-user {
+    width: 29%;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+.online-user::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+}
+.card {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 10px 40px 10px;
+    position: relative;
+}
+.bottom-right {
+    position: absolute;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #b3b3b3;
+    bottom: 10px;
+    right: 15px;
+}
+.forum-text {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.card img {
+    width: 106px;
+    height: 105px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+.card-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #757575;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.card-date {
+    font-size: 1rem;
+    color: #b3b3b3;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.flex {
+    display: flex;
+}
+.online-user {
+    padding-left: 30px;
+}
+.online-user h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+.online-wrapper {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.online-card {
+    background-color: white;
+    padding: 20px 15px 10px 15px;
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.last-card {
+    margin-bottom: 0;
+}
+.online-img {
+    margin-right: 15px;
+}
+.online-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.online-img img {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.online-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.online-status {
+    width: 15px;
+    height: 15px;
+    background-color: #44ff00;
+    border-radius: 100%;
+}
+.recent-activities {
+    margin-top: 5px;
+}
+.recent-activities h1 {
+    font-size: 2rem;
+    color: white;
+}
+.activity-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+.activity-card {
+    flex: 0 0 440px;
+    height: 133px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.activity-logo {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+.activity-logo img {
+    max-width: 40px;
+    height: auto;
+}
+.name-description {
+    width: 85%;
+}
+.name-description h2 {
+    margin-bottom: 10px;
+    color: #1e1e1e;
+}
+.name-description p {
+    color: #757575;
+    line-height: 1.4;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(-4600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1023px) {
+    .top {
+        flex-direction: column;
+    }
+    .active-forum {
+        width: 100%;
+    }
+    .online-user {
+        width: 100%;
+        padding: 0;
+    }
+    .forum-wrapper {
+        padding: 0;
+        border: 0;
+        grid-template-columns: 1fr;
+    }
+    .forum-wrapper::after {
+        display: none;
+    }
+}

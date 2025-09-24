@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+.container {
+    font-family: "Inter", sans-serif;
+}
+.button-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    gap: 6px;
+}
+.button {
+    border-radius: 4px;
+    padding: 6px 7px;
+    color: #757575;
+    background-color: #f5f5f5;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 17px;
+}
+.button-active {
+    background-color: #2c2c2c;
+}
+.top-row,
+.mid-row,
+.bottom-row {
+    display: flex;
+}
+.gallery {
+    display: none;
+}
+.gallery.active {
+    display: block;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10,
+.image11 {
+    width: 25%;
+}
+.image5 {
+    width: 75%;
+}
+.image1,
+.image2,
+.image4,
+.image5 {
+    height: 281px;
+    position: relative;
+    cursor: pointer;
+}
+.image3 {
+    height: 281px;
+    position: relative;
+    cursor: pointer;
+}
+.image6 {
+    height: 281px;
+    position: relative;
+    cursor: pointer;
+}
+.image7 {
+    height: 281px;
+    position: relative;
+    cursor: pointer;
+}
+.image8,
+.image9,
+.image10 {
+    height: 311px;
+    position: relative;
+    cursor: pointer;
+}
+.image11 {
+    height: 311px;
+    position: relative;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.img {
+    height: 100%;
+    width: 100%;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.likes-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+.likes-logo p {
+    text-align: center;
+    margin-right: 15px;
+}
+.likes-logo img {
+    width: 30px;
+    align-self: center;
+    margin-right: 15px;
+}
+.info-likes-wrapper {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 2px;
+}
+.name {
+    color: white;
+    margin-left: 10px;
+}
+.avatar {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.info {
+    display: flex;
+}
+
+.avatar-name {
+    font-weight: 500;
+}
+.art-name {
+    font-weight: 300;
+}
+.avatar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: "Inter", sans-serif;
+}
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-content {
+    position: relative;
+    max-width: 60%;
+    max-height: 90%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+#lightbox-image {
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.lightbox-img {
+    height: calc(100% - 400px);
+    transform: scale(1.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.caption {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.125rem;
+}
+@media (max-width: 1023px) {
+    .top-row,
+    .mid-row,
+    .bottom-row {
+        flex-direction: column;
+    }
+    .image1,
+    .image2,
+    .image3,
+    .image4,
+    .image5,
+    .image6,
+    .image7,
+    .image8,
+    .image9,
+    .image10,
+    .image11 {
+        width: 100%;
+    }
+    .button {
+        padding: 3px 8px;
+        font-size: 1rem;
+    }
+}

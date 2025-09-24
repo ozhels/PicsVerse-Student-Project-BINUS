@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-family: "Inter", sans-serif;
+}
+.container {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 90px;
+}
+.second-side {
+    font-size: 1.25px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.first-wrapper,
+.second-wrapper,
+.third-wrapper,
+.fourth-wrapper,
+.fifth-wrapper {
+    background-color: white;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+}
+.fifth-wrapper p {
+    margin-bottom: 20px;
+}
+
+.first-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picverse {
+    width: 70%;
+    max-width: 591px;
+    aspect-ratio: 591/399;
+    margin-bottom: 40px;
+}
+
+.top-text {
+    margin-bottom: 25px;
+}
+/* Tablet */
+@media (max-width: 1023px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .first-side {
+        width: 100%;
+    }
+    .second-side {
+        width: 100%;
+    }
+    .first-wrapper,
+    .second-wrapper,
+    .third-wrapper,
+    .fourth-wrapper,
+    .fifth-wrapper {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}
+/* Smartphone */
+@media (max-width: 767px) {
+    .first-wrapper,
+    .second-wrapper,
+    .third-wrapper,
+    .fourth-wrapper,
+    .fifth-wrapper {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
